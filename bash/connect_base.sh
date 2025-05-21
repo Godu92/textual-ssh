@@ -29,8 +29,8 @@ display_help() {
   jq -r '(.domains | to_entries[] | .key + ": " + .value)' "$SCRIPT_DIR/$DEFAULT_CONFIG_FILE.json" | column -t
   echo ""
   echo "# Optional: Specify a custom config file (e.g., ./connect db east production)"
-  echo "Available configuration files:"
-  ls "$SCRIPT_DIR"/*.json 2>/dev/null | xargs basename | column -t
+  echo "Available configuration files (*Note:* .json is auto appended, just use name):"
+  ls "$SCRIPT_DIR"/*.json 2>/dev/null | xargs basename -a | sed 's/\.json$//'
   echo ""
   echo "Example: ./connect db east"
 }
