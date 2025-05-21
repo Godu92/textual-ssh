@@ -1,0 +1,13 @@
+{
+  "user": "user",
+  "domains": {
+    "east": "us-east.com",
+    "west": "us-west.com"
+  },
+  "machines": {
+    "db1": "test-db1",
+    "db2": "test-db2",
+    "ui": "test-ui",
+    "server": "test-server"
+  }
+}
